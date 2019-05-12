@@ -10,7 +10,7 @@ public class BasicProducerCallback implements Callback {
             System.err.println("Failed to send msg \n" + exception.getMessage() + "\n"  );
             exception.printStackTrace();
         } else{
-            System.out.println("### Send msg success!!!!");
+            System.out.println("##### Producer ##### topic=" +  metadata.topic() + ",partitions=" + metadata.partition() +", ts=" + metadata.timestamp() + ", offset=" + metadata.offset());
         }
     }
 }
